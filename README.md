@@ -1,7 +1,6 @@
 # SQL-Relational-Database-examples
-
-This repository is to show examples of SQL commands and their use in the databases from:
-https://www.murach.com/shop/murach-s-sql-server-2019-for-developers-detail
+SQL queries and exercises as described in *Murach’s SQL Server 2019 for Developers*  
+Information for this book can be found at [Murach's website](https://www.murach.com/shop/murach-s-sql-server-2019-for-developers-detail).
 
 Exercise One features:
 - WHERE clause
