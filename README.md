@@ -15,19 +15,26 @@ Information for this book can be found at [Murach's website](https://www.murach.
   - Inner joins
   - outer joins
   - UNION of two queries
-  - ASC and DESC
+  - ASC and DESC commands
 <!-- -->
 - Exercise Three features:
-  - GROUP BY
-  - HAVING
-  - ROLLUP
-  - SUM
-  - COUNT
-  - OVER
+  - GROUP BY statements
+  - HAVING clause
+  - ROLLUP extention of GROUP BY clause
+  - SUM aggregate function
+  - COUNT aggregate function
+  - OVER aggregate function
 <!-- -->
 - Exercise four features:
   - Using subqueries
   - Subqueries as search conditions
   - Subqueries in FROM clause
   - Use EXISTS and NOT EXISTS
+<!-- -->
+- Exercise Five features:
+  - Subqueries in SELECT clause
+  - Subqueries in WITH clause
+  - Using CONCAT function
+  - LEFT JOIN subqueries
+  - Using CROSS JOIN
 <!-- -->
