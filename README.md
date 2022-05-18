@@ -10,11 +10,13 @@ Information for this book can be found at [Murach's website](https://www.murach.
   - ORDER BY clause
   - Sort column
   - Retrieve range
+ <!-- -->
 - Exercise Two features:
   - Inner joins
   - outer joins
   - UNION of two queries
   - ASC and DESC
+<!-- -->
 - Exercise Three features:
   - GROUP BY
   - HAVING
@@ -22,8 +24,10 @@ Information for this book can be found at [Murach's website](https://www.murach.
   - SUM
   - COUNT
   - OVER
+<!-- -->
 - Exercise four features:
   - Using subqueries
   - Subqueries as search conditions
   - Subqueries in FROM clause
   - Use EXISTS and NOT EXISTS
+<!-- -->
