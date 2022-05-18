@@ -16,3 +16,11 @@ Exercise Two features:
 - outer joins
 - UNION of two queries
 - ASC and DESC
+
+Exercise 3 features:
+- GROUP BY
+- HAVING
+- ROLLUP
+- SUM
+- COUNT
+- OVER
