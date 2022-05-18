@@ -129,25 +129,34 @@ WHERE EmailAddress = 'rick@raven.com';
 
 -- Problem 20
 UPDATE Customers
-SET Password='reset'
+SET Password='reset';
 
 
 -- Problem 21
 SELECt CAST(ListPrice AS DECIMAL(17,1)) AS CastAsDecimal,
     CONVERT(INT, ListPrice, 1) as ConvertToInt,
     CAST(ListPrice AS INT) AS CastAsInt
-FROM Products
+FROM Products;
 
 
 -- Problem 22
 SELECT Cast(DateAdded AS DATE) AS CastAsDateYYYYMMDD,
     CAST(DateAdded AS datetime) AS CastAsDateTime,
     FORMAT(CAst(DateAdded AS DATE), 'MM/dd') AS CastAsDateMMdd
-FROM Products
+FROM Products;
 
 
 -- Problem 23
 SELECT CONVERT(VARCHAR, OrderDate, 101) AS ConvertToMMddYYYY,
     CONVERT(VARCHAR, OrderDate, 0) AS ConvertToNormalTime,
     CONVART(VARCHAR, OrderDate, 14) AS ConvertToFulltime
-FROM Orders
+FROM Orders;
+
+
+-- Problem 24
+CREATE TABLE GradStudents (
+    StudentID INT Primary Key,
+    LastName VARCHAR(25) NOT NULL,
+    FirstName VARCHAR(25) NOT NULL,
+    EnrollmentDate DATE NOT NULL,
+    GraduationDate DATE NULL);
