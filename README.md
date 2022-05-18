@@ -39,7 +39,8 @@ Information for this book can be found at [Murach's website](https://www.murach.
   - Using CROSS JOIN
 <!-- -->
 - Exercise Six features:
-  - Create a copy of the database
+  - Creating a database
+  - Creating a Copy of a database
   - Modifying database with UPDATE, DELETE, SET, and INSERT
   - Changing DataTypes with CAST and CONVERT
   - Working with CHAR, VARCHAR, INT, and DECIMAL formats
