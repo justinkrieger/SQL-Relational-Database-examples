@@ -11,3 +11,9 @@ Exercise One features:
 - ORDER BY clause
 - Sort column
 - Retrieve range
+
+Exercise Two features:
+- Inner joins
+- outer joins
+- UNION of two queries
+- ASC and DESC
