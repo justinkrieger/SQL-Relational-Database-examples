@@ -1,4 +1,4 @@
-# SQL-Relational-Database-examples
+# SQL Database queries and DataBase modification examples
 SQL queries and exercises as described in *Murach’s SQL Server 2019 for Developers*  
 Information for this book can be found at [Murach's website](https://www.murach.com/shop/murach-s-sql-server-2019-for-developers-detail).
 
