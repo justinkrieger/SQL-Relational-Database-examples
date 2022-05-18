@@ -38,10 +38,10 @@ Information for this book can be found at [Murach's website](https://www.murach.
   - LEFT JOIN subqueries
   - Using CROSS JOIN
 <!-- -->
--Exercise Six features:
-	- Create a copy of the database
-	- Modifying database with UPDATE, DELETE, SET, and INSERT
-	- Changing DataTypes with CAST and CONVERT
-	- Working with CHAR, VARCHAR, INT, and DECIMAL formats
-	- Using format codes to change display format
+- Exercise Six features:
+  - Create a copy of the database
+  - Modifying database with UPDATE, DELETE, SET, and INSERT
+  - Changing DataTypes with CAST and CONVERT
+  - Working with CHAR, VARCHAR, INT, and DECIMAL formats
+  - Using format codes to change display format
 <!-- -->
