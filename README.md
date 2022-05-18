@@ -5,7 +5,8 @@ https://www.murach.com/shop/murach-s-sql-server-2019-for-developers-detail
 
 Examples include:
 - Standard "SELECT * FROM *" query
-- 
+- JOIN techniques using INNER, LEFT, RIGHT
+- Conjugate table columns
 
 SQL commands include:
 -WHERE
