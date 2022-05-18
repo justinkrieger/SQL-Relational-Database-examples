@@ -38,10 +38,10 @@ ORDER BY AccountNo;
 -- Problem 5
 SELECT VendorName, Invoice.InvoiceID, InvoiceSequence, InvoiceLineItemAmount
 FROM Invoices
-    JOIN Vendors
-        ON Invoices.VendorID = Vendors.VendorID
-    JOIN InvoiceLineItems
-        ON Invoices.InvoiceID = InvoiceLineItems.InvoiceID
+JOIN Vendors
+    ON Invoices.VendorID = Vendors.VendorID
+JOIN InvoiceLineItems
+    ON Invoices.InvoiceID = InvoiceLineItems.InvoiceID
 WHERE Invoices.InvoiceID IN (
     SELECT InvoiceID
     FROM InvoiceLineItems
@@ -72,8 +72,8 @@ ORDER BY VendorState, VendorCity;
 SELECT VendorName, InvoiceNumber AS FirstInv,
     InvoiceDate, InvoiceTotal
 FROM Invoice as InvoiceMain
-    JOIN Vendors
-        ON InvoiceMain.VendorID = Vendors.VendorID
+JOIN Vendors
+    ON InvoiceMain.VendorID = Vendors.VendorID
 WHERE InvoiceDate = (
     SELECT MIN(InvoiceDate)
     FROM Invoice as InvoiceSub
@@ -121,10 +121,10 @@ WHERE NOt EXISTS (
 SELECT Cust.EmailAddress, OrdIt.OrderID,
     SUM(OrdIT.ItemPrice - OrdIt.DiscountAmount + Ord.ShipAmount + Ord.TaxAmount) * OrdIt.Quantity) AS OrderTotal
 FROM OrderItems OrdIt
-    JOIN Orders Ord
-        ON OrdIt.OrderID = Ord.OrderID
-    JOIN Customers Cust
-        ON Ord.CustomerID = Cust.CustomerID
+JOIN Orders Ord
+    ON OrdIt.OrderID = Ord.OrderID
+JOIN Customers Cust
+    ON Ord.CustomerID = Cust.CustomerID
 GROUP BY Cust.EmailAddress, OrdIt.OrderID
 ORDER BY Cust.EmailAddress;
 
@@ -135,10 +135,10 @@ FROM (
     SELECT Cust.EmailAddress, OrdIt.OrderID,
         SUM((OrdIt.ItemPrice - OrdIt.DiscountAmount + Ord.ShipAmount + Ord.TaxAmount) * OrdIt.Quantity) AS OrderTotal
         FROM OrderItems OrdIt
-            JOIN Orders Ord
-                ON OrdIt.OrderID = Ord.OrderID
-            JOIN Customers Cust
-                ON Ord.CustomerID = Cust.CustomerID
+        JOIN Orders Ord
+            ON OrdIt.OrderID = Ord.OrderID
+        JOIN Customers Cust
+            ON Ord.CustomerID = Cust.CustomerID
         GROUP BY Cust.EmailAddress, OrdIt.OrderID) AS OrderTotals
 GROUP BY OrderTotals.EmailAddress
 
@@ -157,9 +157,11 @@ ORDER BY ProdMain.ProductName;
 -- Problem 16
 SELECT Cust.EmailAddress, OrdMain.OrderID, OrdOld.OldestDate
 FROM Customers Cust
-    JOIN (
-        SELECT OrdSub.CustomerID, MIN(OrdSub.OrderDate) AS OldestDate
-        FROM Orders OrdSub
-        GROUP BY OrdSub.CustomerID) AS OrdOld
-    JOIN Orders OrdMain
-        ON OrdOld.OldestDate = OrdMain.OrderDate
+JOIN (
+    SELECT OrdSub.CustomerID, MIN(OrdSub.OrderDate) AS OldestDate
+    FROM Orders OrdSub
+    GROUP BY OrdSub.CustomerID) AS OrdOld
+    ON Cust.CustomerID = OrdOld.CustomerID
+
+JOIN Orders OrdMain
+    ON OrdOld.OldestDate = OrdMain.OrderDate
